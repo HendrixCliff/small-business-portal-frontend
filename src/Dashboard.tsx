@@ -21,7 +21,7 @@ function Dashboard() {
     <>
       <header className="mb-[.5em]">
         {!isLoggedIn ? (
-          <section className="flex gap-[3em] max-md:mt-[1em] max-[600px]:mr-[5.5em]  w-[20%] max-md:w-[60%] max-md:gap-[.5em] ml-auto">
+          <section className="flex gap-[3em] max-[600px]:gap-[.5em] max-md:mt-[1em] max-[600px]:mr-[5.5em]  w-[20%] max-md:w-[60%] max-md:gap-[.5em] ml-auto">
             <Link to="/authenticate" className="btn text-center bg-[#ffed2f] text-[1rem] text-[#2f42ff] rounded-full w-[60%] px-[.6em] py-[1em]">Login</Link>
             <Link to="/signup" className="btn px-[.6em] text-center text-[1rem]  rounded-full text-[#ffed2f] bg-[#2f42ff]  w-[50%] py-[1em]">Signup</Link>
           </section>
