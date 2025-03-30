@@ -29,7 +29,7 @@ const VideosList: React.FC = () => {
   }
 
   return (
-    <div>
+    <section>
       <h2>Product Videos</h2>
       <ul>
         {videos.map((video) => (
@@ -46,14 +46,14 @@ const VideosList: React.FC = () => {
             <br />
             <button
               onClick={() => handleDelete(video._id)}
-              className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200"
+              className="mt-2 px-4 max-[600px]:ml-[1em] py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200"
             >
               <RiDeleteBin5Line size={30}/>
             </button>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
