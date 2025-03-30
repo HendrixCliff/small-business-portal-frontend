@@ -32,26 +32,31 @@ const VideosList: React.FC = () => {
     <section>
       <h2>Product Videos</h2>
       <ul>
-        {videos.map((video) => (
-          <li key={video._id}>
-            <h3>{video.title}</h3>
-            <iframe
-              width="560"
-              height="315"
-              src={video.url}
-              title={video.title}
-              frameBorder="0"
-              allowFullScreen
-            ></iframe>
-            <br />
-            <button
-              onClick={() => handleDelete(video._id)}
-              className="mt-2 px-4 max-[600px]:ml-[1em] py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200"
-            >
-              <RiDeleteBin5Line size={30}/>
-            </button>
-          </li>
-        ))}
+      {videos.map((video) => (
+  <li key={video._id} className="w-full max-w-[600px] mx-auto">
+    <h3 className="text-lg font-semibold text-center">{video.title}</h3>
+    
+    {/* Responsive Video Wrapper */}
+    <div className="relative w-full h-0 pb-[56.25%] mt-2">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full rounded-md shadow-lg"
+        src={video.url}
+        title={video.title}
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    {/* Delete Button */}
+    <button
+      onClick={() => handleDelete(video._id)}
+      className="mt-3 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-200 block mx-auto"
+    >
+      <RiDeleteBin5Line size={30} />
+    </button>
+  </li>
+))}
+
       </ul>
     </section>
   );
