@@ -50,7 +50,7 @@ export const SignUpComponent: React.FC = () => {
         <FaArrowLeftLong size={25} />
       </Link>
 
-      <section className="overflow-hidden flex max-md:flex-col gap-8 max-md:gap-2">
+      <section className="overflow-hidden flex max-[600px]:flex-col gap-8 max-md:gap-2">
         <img 
           className="w-1/2 max-md:w-full max-md:m-1 object-cover h-96 max-md:h-52" 
           src="/images/wild.webp" 

@@ -4,6 +4,7 @@ import Dashboard from './Dashboard';
 import AuthenticatePage from './AuthenticationPage'
 import {SignUpComponent} from './authorization/SignUpComponent';
 import ErrorBoundary from "./errorFeatures/ErrorBoundary";
+import BusinessPage from "./ProtectedRoutes/BusinessPage";
 
 const App: React.FC = () => {
 
@@ -15,7 +16,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/authenticate" element={<AuthenticatePage />} />
           <Route path="/signup" element={<SignUpComponent />} />
-
+          <Route path="/:slug" element={<BusinessPage />} />
           {/* Fallback Route */}
           <Route path="*" element={<Navigate to="/authenticate" />} />
         </Routes>

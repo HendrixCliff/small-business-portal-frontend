@@ -7,6 +7,8 @@ import authReducer from './authSlice';
 import usersReducer from "./usersSlice";
 import receiveMessageReducer from "./receiveMessageSlice"
 import orderReducer from "./orderSlice"
+import businessReducer from "./businessSlice";
+import businessListReducer from "./businessListSlice";
 // ✅ Combine reducers correctly (No need for "reducer" key inside)
 
 
@@ -19,6 +21,8 @@ export const rootReducer = combineReducers({
   users: usersReducer,
   receiveMessage: receiveMessageReducer,
   order: orderReducer,
+  business: businessReducer,
+  businesses: businessListReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
